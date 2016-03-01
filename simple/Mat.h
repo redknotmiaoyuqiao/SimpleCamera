@@ -6,16 +6,17 @@
 #define SIMPLECAMERA_MAT_H
 
 #include "Pixel.h"
+#include <stdint.h>
 
 class Mat {
 private:
-    int * array;
+    uint32_t * array;
     int width;
     int height;
 public:
-    Mat(int * array,int width,int height);
+    Mat(uint32_t * array,int width,int height);
 
-    int * getArray();
+    uint32_t * getArray();
     int getWidth();
     int getHeight();
 

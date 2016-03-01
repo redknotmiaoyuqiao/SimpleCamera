@@ -4,14 +4,14 @@
 
 #include "Mat.h"
 
-Mat::Mat(int * array,int width,int height)
+Mat::Mat(uint32_t * array,int width,int height)
 {
     this->width = width;
     this->height = height;
     this->array = array;
 }
 
-int* Mat::getArray()
+uint32_t* Mat::getArray()
 {
     return this->array;
 }
@@ -28,7 +28,17 @@ int Mat::getHeight()
 
 Pixel * Mat::getPixel(int x,int y)
 {
-    int * p_pix = &(this->array[this->width * y + x]);
+    int i = this->width * y + x;
+
+    if(i >= (this->width * this->height)){
+        return NULL;
+    }
+
+    if(i < 0){
+        return NULL;
+    }
+
+    uint32_t * p_pix = &(this->array[i]);
     Pixel * pixel = new Pixel(p_pix);
     return pixel;
 }

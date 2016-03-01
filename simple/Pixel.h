@@ -5,19 +5,23 @@
 #ifndef SIMPLECAMERA_PIXEL_H
 #define SIMPLECAMERA_PIXEL_H
 
+#include <stdint.h>
 
 class Pixel {
 private:
-    int * pixel;
+    uint32_t * pixel;
 public:
 
-    Pixel(int * pixel);
+    Pixel(uint32_t * pixel);
 
-    int getR();
-    int getG();
-    int getB();
+    uint8_t getR();
+    uint8_t getG();
+    uint8_t getB();
 
-    void setPixel(int R,int G,int B);
+    void setPixel(uint8_t R,uint8_t G,uint8_t B);
+
+    void setPixel(uint32_t color);
+    uint32_t getColor();
 };
 
 
