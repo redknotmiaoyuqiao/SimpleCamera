@@ -15,7 +15,7 @@ private:
 public:
     Binary(Mat * mat);
 
-    void BinaryByThreshold(uint8_t threshold);
+    void BinaryByThreshold(uint32_t threshold);
     void BinaryByArea(int area_width,int area_height,float scale);
 };
 

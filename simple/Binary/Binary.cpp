@@ -9,21 +9,21 @@ Binary::Binary(Mat * mat)
     this->mat = mat;
 }
 
-void Binary::BinaryByThreshold(uint8_t threshold)
+void Binary::BinaryByThreshold(uint32_t threshold)
 {
     for(int y=0;y<this->mat->getHeight();y++) {
         for (int x = 0; x < this->mat->getWidth(); x++) {
             Pixel *pixel = this->mat->getPixel(x, y);
 
-            uint8_t R = pixel->getR();
-            uint8_t G = pixel->getG();
-            uint8_t B = pixel->getB();
+            uint32_t R = pixel->getR();
+            uint32_t G = pixel->getG();
+            uint32_t B = pixel->getB();
 
-            uint8_t y = (R*19595 + G*38469 + B*7472) >> 16;
+            uint32_t gray = (R*19595 + G*38469 + B*7472) >> 16;
 
             uint8_t color;
 
-            if(y<threshold){
+            if(gray<threshold){
                 color = 0x00;
             }else{
                 color = 0xff;
@@ -47,7 +47,7 @@ void Binary::BinaryByArea(int area_width,int area_height,float scale)
 
             uint32_t y_count = 0;
 
-            uint8_t y_array[area_width * area_height];
+            uint32_t y_array[area_width * area_height];
             int yp = 0;
 
             int x_start = i * area_width;
@@ -72,11 +72,11 @@ void Binary::BinaryByArea(int area_width,int area_height,float scale)
                 for(int area_y=y_start;area_y<y_end;area_y++,yp++){
                     Pixel *pixel = this->mat->getPixel(area_x, area_y);
 
-                    uint8_t R = pixel->getR();
-                    uint8_t G = pixel->getG();
-                    uint8_t B = pixel->getB();
+                    uint32_t R = pixel->getR();
+                    uint32_t G = pixel->getG();
+                    uint32_t B = pixel->getB();
 
-                    uint8_t y = (R*19595 + G*38469 + B*7472) >> 16;
+                    uint32_t y = (R*19595 + G*38469 + B*7472) >> 16;
 
                     y_array[yp] = y;
 
@@ -112,9 +112,9 @@ void Binary::BinaryByArea(int area_width,int area_height,float scale)
                 for(int area_y=y_start;area_y<y_end;area_y++,yp++){
                     Pixel *pixel = this->mat->getPixel(area_x, area_y);
 
-                    uint8_t y = y_array[yp];
+                    uint32_t y = y_array[yp];
 
-                    uint8_t color;
+                    uint32_t color;
 
                     if(y<(threshold * scale)){
                         color = 0x00;

@@ -11,5 +11,6 @@
 #include "Gray/Gray.h"
 #include "Blur/Blur.h"
 #include "Binary/Binary.h"
+#include "Color/Color.h"
 
 #endif //SIMPLECAMERA_SIMPLE_H

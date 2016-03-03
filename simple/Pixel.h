@@ -14,11 +14,11 @@ public:
 
     Pixel(uint32_t * pixel);
 
-    uint8_t getR();
-    uint8_t getG();
-    uint8_t getB();
+    uint32_t getR();
+    uint32_t getG();
+    uint32_t getB();
 
-    void setPixel(uint8_t R,uint8_t G,uint8_t B);
+    void setPixel(uint32_t R,uint32_t G,uint32_t B);
 
     void setPixel(uint32_t color);
     uint32_t getColor();

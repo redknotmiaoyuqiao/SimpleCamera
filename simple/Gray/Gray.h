@@ -7,6 +7,7 @@
 
 #include "../Mat.h"
 #include "../Pixel.h"
+#include <math.h>
 
 class Gray {
 private:
@@ -14,6 +15,9 @@ private:
 public:
     Gray(Mat * mat);
     void normalGray();
+    void negative();
+    void gamma(double c,double _y);
+    void logGray(double c);
 };
 
 
