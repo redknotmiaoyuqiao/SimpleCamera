@@ -10,7 +10,10 @@
 
 #include "Gray/Gray.h"
 #include "Blur/Blur.h"
-#include "Binary/Binary.h"
+//#include "Binary/Binary.h"
 #include "Color/Color.h"
 
+#include "YUVMat.h"
+
+#include "YUV/Binary.h"
 #endif //SIMPLECAMERA_SIMPLE_H

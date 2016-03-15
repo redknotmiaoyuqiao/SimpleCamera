@@ -70,6 +70,8 @@ void Binary::BinaryByArea(int area_width,int area_height,float scale)
 
             for(int area_x=x_start;area_x<x_end; area_x++){
                 for(int area_y=y_start;area_y<y_end;area_y++,yp++){
+
+
                     Pixel *pixel = this->mat->getPixel(area_x, area_y);
 
                     uint32_t R = pixel->getR();

@@ -29,7 +29,7 @@ int Mat::getHeight()
 Pixel * Mat::getPixel(int x,int y)
 {
     int i = this->width * y + x;
-
+/*
     if(i >= (this->width * this->height)){
         return NULL;
     }
@@ -37,6 +37,7 @@ Pixel * Mat::getPixel(int x,int y)
     if(i < 0){
         return NULL;
     }
+    */
 
     uint32_t * p_pix = &(this->array[i]);
     Pixel * pixel = new Pixel(p_pix);

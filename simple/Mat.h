@@ -11,6 +11,7 @@
 class Mat {
 private:
     uint32_t * array;
+
     int width;
     int height;
 public:
