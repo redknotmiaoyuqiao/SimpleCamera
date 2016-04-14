@@ -1,10 +1,10 @@
 #Very fun 图像处理
 
-![image](https://github.com/redknotmiaoyuqiao/SimpleCamera/blob/master/img/Screenshot_2016-04-14-09-26-38.png?raw=true)
+<img style="width:300px" src="https://github.com/redknotmiaoyuqiao/SimpleCamera/blob/master/img/Screenshot_2016-04-14-09-26-38.png?raw=true" />
 
-![image](https://github.com/redknotmiaoyuqiao/SimpleCamera/blob/master/img/Screenshot_2016-04-14-09-29-30.png?raw=true)
+<img style="width:300px" src="https://github.com/redknotmiaoyuqiao/SimpleCamera/blob/master/img/Screenshot_2016-04-14-09-29-30.png?raw=true" />
 
-![image](https://raw.githubusercontent.com/redknotmiaoyuqiao/SimpleCamera/master/img/Screenshot_2016-04-14-09-31-26.png)
+<img style="width:300px" src="https://raw.githubusercontent.com/redknotmiaoyuqiao/SimpleCamera/master/img/Screenshot_2016-04-14-09-31-26.png" />
 
 
 #2016.2.28 更新
